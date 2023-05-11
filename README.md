@@ -1,4 +1,4 @@
-![Typescript](https://res.cloudinary.com/suberiq/image/upload/v1683829115/MASTER_TYPESCRIPT_1_jbzjr2.png)
+![Typescript](https://res.cloudinary.com/suberiq/image/upload/v1683830585/MASTER_TYPESCRIPT_2_-min_rhvi4x.png)
 
 # TypeScript vs JavaScript
  
