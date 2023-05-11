@@ -1,3 +1,5 @@
+![Typescript](https://res.cloudinary.com/suberiq/image/upload/v1683829115/MASTER_TYPESCRIPT_1_jbzjr2.png)
+
 # TypeScript vs JavaScript
  
 ### TypeScript and JavaScript are both programming languages, but they have some differences in their syntax and features.
