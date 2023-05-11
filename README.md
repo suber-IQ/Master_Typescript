@@ -1,5 +1,8 @@
 ![Typescript](https://res.cloudinary.com/suberiq/image/upload/v1683830585/MASTER_TYPESCRIPT_2_-min_rhvi4x.png)
 
+---
+> # INTRODUCTION
+---
 # TypeScript vs JavaScript
  
 ### TypeScript and JavaScript are both programming languages, but they have some differences in their syntax and features.
@@ -39,9 +42,10 @@
 
 - Overall, the interoperability between TypeScript and JavaScript allows developers to take advantage of the benefits of both languages in the same codebase. This enables them to improve the maintainability and scalability of their applications, while also leveraging existing JavaScript code and libraries.
 
+---
 # Install and Configure
 
-1. Install Node.js: TypeScript requires Node.js to be installed on your machine. You can download and install Node.js from the official website: [https://nodejs.org](https://nodejs.org.)
+1. Install Node.js: TypeScript requires Node.js to be installed on your machine. You can download and install Node.js from the official website: *click Here :*  [https://nodejs.org](https://nodejs.org.)
 2. Install TypeScript: Once Node.js is installed, open a command prompt or terminal and run the following command to install TypeScript globally:
 
 `
@@ -99,5 +103,44 @@ node filename.js
 }
 ```
 *Learn more from the following links:*
-- [What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#handbook-content)
-- [Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+- *click Here :*  [What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#handbook-content)
+- *click Here :*  [Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+
+---
+# Running TypeScript
+
+- `tsc:`ts-node is a TypeScript execution engine and REPL (Read-Eval-Print Loop) for Node.js. It allows developers to run TypeScript code directly in a Node.js environment without the need for compiling it to JavaScript.
+
+*To use ts-node, first, you need to install it globally via npm:*
+
+```typescript
+npm install -g ts-node
+```
+
+*Once installed, you can run a TypeScript file by simply executing it with the ts-node command, like this:*
+
+```typescript
+ts-node reptile.ts
+or
+node reptile.ts
+```
+*You can also use ts-node to start a TypeScript REPL by running the following command in your terminal:*
+
+```typescript
+ts-node
+```
+- *click Here :*  [ts-node - Github Project](https://github.com/TypeStrong/ts-node)
+- *click Here :* [How to Run Typescript with ts-node](https://www.digitalocean.com/community/tutorials/typescript-running-typescript-ts-node)
+
+---
+# Ts Playground
+
+- TypeScript Playground is an online tool for writing, sharing, and testing TypeScript code. It provides an interactive environment where developers can experiment with TypeScript code without requiring any setup or installation.
+
+- The TypeScript Playground includes a code editor with syntax highlighting, automatic code formatting, and error highlighting. It also includes a console that displays the output of the code, as well as any errors or warnings that may occur.
+
+- Developers can use the TypeScript Playground to test out new features, debug code, or share code snippets with others. They can also configure the compiler options and target version of TypeScript, allowing them to see how their code will behave in different environments.
+
+- The TypeScript Playground is a useful tool for learning and experimenting with TypeScript, as well as for quickly prototyping and sharing code snippets with others.
+
+- *click Here :* [TypeScript-Playground](https://www.typescriptlang.org/play)
