@@ -1,49 +1,49 @@
 ![Typescript](https://res.cloudinary.com/suberiq/image/upload/v1683830585/MASTER_TYPESCRIPT_2_-min_rhvi4x.png)
 
 ---
-> # INTRODUCTION
+> # ✴️INTRODUCTION
 ---
-# TypeScript vs JavaScript
+# 💥TypeScript vs JavaScript
  
-### TypeScript and JavaScript are both programming languages, but they have some differences in their syntax and features.
+### 👉TypeScript and JavaScript are both programming languages, but they have some differences in their syntax and features.
 
-## Static Typing
+## 🌀Static Typing
 
-- TypeScript is a statically typed language, which means that variables and function parameters have to be declared with a specific type. This helps catch errors at compile-time, making code more robust and maintainable. JavaScript, on the other hand, is a dynamically typed language, which means that types are inferred at runtime.
+- ↪️TypeScript is a statically typed language, which means that variables and function parameters have to be declared with a specific type. This helps catch errors at compile-time, making code more robust and maintainable. JavaScript, on the other hand, is a dynamically typed language, which means that types are inferred at runtime.
 
-## Optional Types
+## 🌀Optional Types
 
-- TypeScript also has support for optional types, which allows developers to specify that a variable or parameter may be of a certain type, but doesn't have to be. This is useful for cases where you may not know the type of a variable until runtime.
+- ↪️TypeScript also has support for optional types, which allows developers to specify that a variable or parameter may be of a certain type, but doesn't have to be. This is useful for cases where you may not know the type of a variable until runtime.
 
-## Classes and Interfaces
+## 🌀Classes and Interfaces
 
-- TypeScript has a more robust support for classes and interfaces, which are used to define object-oriented programming (OOP) constructs. JavaScript also supports OOP, but its syntax is more limited.
+- ↪️TypeScript has a more robust support for classes and interfaces, which are used to define object-oriented programming (OOP) constructs. JavaScript also supports OOP, but its syntax is more limited.
 
-## Compiler
+## 🌀Compiler
 
-- TypeScript requires a compiler to transpile the code into JavaScript, which can then be run in a browser or on a server. JavaScript does not require a compiler, as it is a scripting language that can be executed directly in a browser or server.
+- ↪️TypeScript requires a compiler to transpile the code into JavaScript, which can then be run in a browser or on a server. JavaScript does not require a compiler, as it is a scripting language that can be executed directly in a browser or server.
 
-## Tooling
+## 🌀Tooling
 
-- TypeScript has excellent tooling support, with features like code completion, code navigation, and refactoring available in many integrated development environments (IDEs). JavaScript also has good tooling support, but it's not as advanced as TypeScript.
+- ↪️TypeScript has excellent tooling support, with features like code completion, code navigation, and refactoring available in many integrated development environments (IDEs). JavaScript also has good tooling support, but it's not as advanced as TypeScript.
 
-- In summary, TypeScript offers additional features and benefits over JavaScript, such as static typing, optional types, and better OOP support. However, it also requires additional setup and tooling to use effectively. JavaScript remains a popular and widely used language due to its simplicity, ubiquity, and ease of use.
+- ↪️In summary, TypeScript offers additional features and benefits over JavaScript, such as static typing, optional types, and better OOP support. However, it also requires additional setup and tooling to use effectively. JavaScript remains a popular and widely used language due to its simplicity, ubiquity, and ease of use.
 ---
 
-# TypeScript and JavaScript Interoperability
+# 💥TypeScript and JavaScript Interoperability
 
-### TypeScript and JavaScript are interoperable, which means that they can work together seamlessly in the same codebase. TypeScript is a superset of JavaScript, so any valid JavaScript code is also valid TypeScript code.
+### 👉TypeScript and JavaScript are interoperable, which means that they can work together seamlessly in the same codebase. TypeScript is a superset of JavaScript, so any valid JavaScript code is also valid TypeScript code.
 
-- TypeScript code can also use existing JavaScript code or libraries, without requiring any modification or conversion. This allows developers to gradually migrate from JavaScript to TypeScript by incrementally adding types and other TypeScript features to their codebase.
+- ↪️TypeScript code can also use existing JavaScript code or libraries, without requiring any modification or conversion. This allows developers to gradually migrate from JavaScript to TypeScript by incrementally adding types and other TypeScript features to their codebase.
 
-- On the other hand, JavaScript code can consume TypeScript code using TypeScript declaration files. Declaration files provide type information for TypeScript code, which can be used by JavaScript code to ensure that the TypeScript code is being used correctly.
+- ↪️On the other hand, JavaScript code can consume TypeScript code using TypeScript declaration files. Declaration files provide type information for TypeScript code, which can be used by JavaScript code to ensure that the TypeScript code is being used correctly.
 
-- In addition, TypeScript provides a "any" type, which allows developers to use existing JavaScript code without type annotations. This is useful when working with third-party libraries that do not have TypeScript definitions.
+- ↪️In addition, TypeScript provides a "any" type, which allows developers to use existing JavaScript code without type annotations. This is useful when working with third-party libraries that do not have TypeScript definitions.
 
-- Overall, the interoperability between TypeScript and JavaScript allows developers to take advantage of the benefits of both languages in the same codebase. This enables them to improve the maintainability and scalability of their applications, while also leveraging existing JavaScript code and libraries.
+- ↪️Overall, the interoperability between TypeScript and JavaScript allows developers to take advantage of the benefits of both languages in the same codebase. This enables them to improve the maintainability and scalability of their applications, while also leveraging existing JavaScript code and libraries.
 
 ---
-# Install and Configure
+# 💥Install and Configure
 
 1. Install Node.js: TypeScript requires Node.js to be installed on your machine. You can download and install Node.js from the official website: *click Here :*  [https://nodejs.org](https://nodejs.org.)
 2. Install TypeScript: Once Node.js is installed, open a command prompt or terminal and run the following command to install TypeScript globally:
@@ -107,7 +107,7 @@ node filename.js
 - *click Here :*  [Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 
 ---
-# Running TypeScript
+# 💥Running TypeScript
 
 - `tsc:`ts-node is a TypeScript execution engine and REPL (Read-Eval-Print Loop) for Node.js. It allows developers to run TypeScript code directly in a Node.js environment without the need for compiling it to JavaScript.
 
@@ -133,7 +133,7 @@ ts-node
 - *click Here :* [How to Run Typescript with ts-node](https://www.digitalocean.com/community/tutorials/typescript-running-typescript-ts-node)
 
 ---
-# Ts Playground
+# 💥Ts Playground
 
 - TypeScript Playground is an online tool for writing, sharing, and testing TypeScript code. It provides an interactive environment where developers can experiment with TypeScript code without requiring any setup or installation.
 
