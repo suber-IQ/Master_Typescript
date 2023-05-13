@@ -144,3 +144,104 @@ ts-node
 - The TypeScript Playground is a useful tool for learning and experimenting with TypeScript, as well as for quickly prototyping and sharing code snippets with others.
 
 - *click Here :* [TypeScript-Playground](https://www.typescriptlang.org/play)
+
+---
+
+> # ✴️Typescript Types
+
+## 🌀Primitive Types
+ 
+- In TypeScript, a primitive is a basic data type that represents a single value, and is not an object. There are five/six primitive types in TypeScript:
+
+1. ⚡boolean:-boolean is a primitive data type in TypeScript that represents a boolean value i.e. either true or false. Given below is an example of a boolean variable declaration:
+
+**↪️Example :-**
+
+```typescript
+function isGreadterThanTen(num: number): boolean{
+    return num > 10;
+}
+
+let result1: boolean = isGreadterThanTen(5) // returns false;
+let result2: boolean = isGreadterThanTen(15) // returns true;
+
+
+console.log(result1);  //then run command `ts-node boolean.ts`
+console.log(result2);
+```
+2. ⚡string :- It is a primitive data type in TypeScript that represents textual data. It is a set of elements of the 16-bit Unicode character set.
+
+
+**↪️Example :-**
+```typescript
+function sayHello(name: string): string{
+    return `Hello , ${name}!`
+}
+
+let greeting: string = sayHello("Sumit"); //returns "Hello, Sumit!"
+
+console.log(greeting);
+```
+
+3. ⚡number: - It is a primitive data type in TypeScript that represents numeric values. It includes both integer and floating-point values.
+
+
+**↪️Example :-**
+```typescript
+function calculateSum(num1: number, num2: number): number {
+    return num1 + num2;
+}
+
+let result: number  = calculateSum(5,10); //returns 15
+
+console.log(`Sum of two numbers return: ${result}`); // run command `ts-node number.ts`
+```
+
+4. ⚡null :-In TypeScript, null is a built-in data type that represents the intentional absence of any object value. Unlike undefined, null is explicitly assigned to a variable to indicate that it has no value. Here's an example:
+
+**↪️Example :-**
+```typescript
+function printMessage(message: string): null {
+    console.log(message);
+    return null;
+  }
+  
+printMessage("hello world")
+```
+5. ⚡undefined:  In TypeScript, undefined is a built-in data type that represents the absence of a value. A variable that is declared but not initialized or assigned a value is automatically assigned the value undefined. Here's an example:
+
+
+**↪️Example :-**
+```typescript
+let message: string | undefined;
+if (message === undefined) {
+  console.log("Message is undefined");
+} else {
+  console.log("Message is: " + message);
+}
+```
+
+6. ⚡void :- void represents the return value of functions which don’t return a value. It’s the inferred type any time a function doesn’t have any return statements, or doesn’t return any explicit value from those return statements:
+
+**↪️Example :-**
+```typescript
+function logMessage(message: string): void {
+    console.log(message);
+    
+}
+
+logMessage("Hello world!");  // logs "Hello world" to the console
+```
+7. ⚡symbol - used to represent unique identifiers.
+
+
+**↪️Example :-**
+```typescript
+const mySymbol = Symbol("mySymbol");
+
+console.log(mySymbol);
+```
+
+
+
+

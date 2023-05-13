@@ -9,16 +9,16 @@
 
 // ↪️ Example: 2 with function
 
-// function isGreadterThanTen(num: number): boolean{
-//     return num > 10;
-// }
+function isGreadterThanTen(num: number): boolean{
+    return num > 10;
+}
 
-// let result1: boolean = isGreadterThanTen(5) // returns false;
-// let result2: boolean = isGreadterThanTen(15) // returns true;
+let result1: boolean = isGreadterThanTen(5) // returns false;
+let result2: boolean = isGreadterThanTen(15) // returns true;
 
 
-// console.log(result1);  //then run command `ts-node boolean.ts`
-// console.log(result2);
+console.log(result1);  //then run command `ts-node boolean.ts`
+console.log(result2);
 
 
 
