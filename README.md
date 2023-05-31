@@ -242,6 +242,272 @@ const mySymbol = Symbol("mySymbol");
 console.log(mySymbol);
 ```
 
+---
+> # ✴️Type Interface
+---
+
+## 🌀Type Inference
+- Type inference in TypeScript refers to the process of automatically determining the type of a variable based on the value assigned to it. This allows you to write code that is more concise and easier to understand, as the TypeScript compiler can deduce the types of variables without you having to explicitly specify them.
+
+**↪️Example :-**
+```typescript
+let x = 3;
+// let x: number
+
+let y = [0, 1, null];
+// let x: (number | null)[]
+
+let zoo = [new Rhino(), new Elephant(), new Snake()];
+// let zoo: (Rhino | Elephant | Snake)[]
+```
+
+---
+> # ✴️Type Compatibility
+---
+
+## 🌀Type Compatibility
+- TypeScript uses structural typing to determine type compatibility. This means that two types are considered compatible if they have the same structure, regardless of their names.
+
+**↪️Example :-**
+```typescript
+interface Point {
+    x: number;
+    y: number;
+  }
+  
+  let p1: Point = { x: 10, y: 20 };
+  let p2: { x: number; y: number } = p1;
+  
+  console.log(p2.x); // Output: 10
+
+// ↪️ Example :
+
+
+  interface Pet {
+    name: string;
+  }
+  class Dog {
+    name: string;
+  }
+  let pet: Pet;
+  // OK, because of structural typing
+  pet = new Dog();
+
+//💥   Comparing two functions
+
+let x = (a: number) => 0;
+let y = (b: number, s: string) => 0;
+y = x; // OK
+x = y; // Error
+
+// And 
+
+let x = () => ({ name: "Alice" });
+let y = () => ({ name: "Alice", location: "Seattle" });
+x = y; // OK
+y = x; // Error, because x() lacks a location property
+
+
+```
+
+---
+> # ✴️Combining Types
+---
+
+## 🌀Combining Types
+- In TypeScript, types can be combined to create more complex types using various type operators and syntax. This process is called "combining types".
+
+// ▶️ Type Union  
+// ▶️ Type intersection 
+
+1. ⚡Union Types:- Union Types in TypeScript allow you to specify multiple possible types for a single variable or parameter. A union type is written as a vertical bar | separated list of types.
+
+**↪️Example :-**
+```typescript
+function combine(input1: string | number, input2: string | number) {
+    return input1 + input2;
+  }
+  function printId(id: number | string) {
+    console.log("Your ID is: " + id);
+  }
+  // OK
+  printId(101);
+  // OK
+  printId("202");
+  // Error
+  printId({ myID: 22342 });
+  Argument of type '{ myID: number; }' is not assignable to parameter of type 'string | number'
+
+
+function printId(id: number | string) {
+    console.log(id.toUpperCase());
+  Property 'toUpperCase' does not exist on type 'string | number'.
+    Property 'toUpperCase' does not exist on type 'number'.
+  }
+
+```
+
+**Take More Infromation** 
+- *click Here :* [Uninon Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
+
+---
+
+2. ⚡Type Aliases:- A Type Alias in TypeScript allows you to create a new name for a type.
+
+**↪️Example :-**
+```typescript
+type Name = string;
+type Age = number;
+type User = { name: Name; age: Age };
+
+const user: User = { name: 'John', age: 30 };
+
+// ↪️ Example
+type MyCustomType = {
+    id: number;
+    name: string;
+    age?: number;
+  }
+
+  function getPerson(id: number): MyCustomType {
+    // implementation here
+  }
+  
+  const person: MyCustomType = {
+    id: 1,
+    name: "John Smith"
+  };
+  
+
+```
+- 🌟 NOTE:- In the example above, Name and Age are type aliases for string and number respectively. And User is a type alias for an object with properties name of type Name and age of type Age.
+
+**Take More Infromation** 
+- *click Here :* [Type Aliases Link](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases)
+
+---
+
+
+3. ⚡keyof Operator:-The keyof operator in TypeScript is used to get the union of keys from an object type. Here’s an example of how it can be used:
+
+**↪️Example :-**
+```typescript
+
+interface User {
+    name: string;
+    age: number;
+    location: string;
+  }
+  
+  type UserKeys = keyof User; // "name" | "age" | "location"
+  const key: UserKeys = 'name';
+
+// ↪️ Example :
+
+type Person = {
+    name: string;
+    age: number;
+    address: string;
+  }
+  
+  type PersonKeys = keyof Person;
+  
+  // PersonKeys is equal to "name" | "age" | "address"
+  
+  function getValueByKey<T, K extends keyof T>(obj: T, key: K): T[K] {
+    return obj[key];
+  }
+  
+  const person: Person = {
+    name: "John Smith",
+    age: 30,
+    address: "123 Main St"
+  };
+  
+  const name = getValueByKey(person, "name"); // name is a string
+  const age = getValueByKey(person, "age"); // age is a number
+  const address = getValueByKey(person, "address"); // address is a string
+
+```
+
+**Take More Infromation** 
+- *click Here :* [keyof Type Operator Link](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html#handbook-content)
+
+---
+
+
+4. ⚡Intersection Types :- An intersection type creates a new type by combining multiple existing types. The new type has all features of the existing types.
+
+**↪️Example :-**
+```typescript
+// type typeAB = typeA & typeB;
+
+// ↪️ Example :
+let varName = typeA | typeB; // union type
+
+// ↪️ Example :
+interface BusinessPartner {
+    name: string;
+    credit: number;
+}
+
+interface Identity {
+    id: number;
+    name: string;
+}
+
+interface Contact {
+    email: string;
+    phone: string;
+}
+
+
+type Employee = Identity & Contact;
+type Customer = BusinessPartner & Contact;
+
+
+type Employee = Identity & Contact;
+
+let e: Employee = {
+    id: 100,
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    phone: '(408)-897-5684'
+};
+
+type Customer = BusinessPartner & Contact;
+
+let c: Customer = {
+    name: 'ABC Inc.',
+    credit: 1000000,
+    email: 'sales@abcinc.com',
+    phone: '(408)-897-5735'
+};
+
+
+type Employee = Identity & BusinessPartner & Contact;
+
+let e: Employee = {
+    id: 100,
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    phone: '(408)-897-5684',
+    credit: 1000
+};
+
+// 💥Type Order
+// When you intersect types, the order of the types doesn’t matter. For example:
+
+// type typeAB = typeA & typeB;
+// type typeBA = typeB & typeA;
 
 
 
+// The typeAB will have all properties from both typeA and typeB
+
+```
+- 🌟 NOTE:- that the union type uses the | operator that defines a variable which can hold a value of either typeA or typeB
+
+
+**Take More Infromation** 
+- *click Here :* [Typescript Intersection Types](https://www.typescripttutorial.net/typescript-tutorial/typescript-intersection-types/)
